@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const Student = require("../models/Student");
 
-//CREATE POST
+//CREATE 
 router.post("/", async (req, res) => {
   const newStudent = new Student(req.body);
   try {
@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-//UPDATE POST
+//UPDATE 
 router.put("/:id", async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
@@ -38,7 +38,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-//DELETE POST
+//DELETE 
 router.delete("/:id", async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
@@ -57,7 +57,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//GET POST
+//GET 
 router.get("/:id", async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
@@ -67,7 +67,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//GET ALL POSTS
+//GET ALL 
 router.get("/", async (req, res) => {
   const username = req.query.user;
   const catName = req.query.cat;

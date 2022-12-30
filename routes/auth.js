@@ -18,6 +18,9 @@ router.post("/register", async (req, res) => {
     res.status(500).json(err);
   }
 });
+//LOGOUT
+
+
 
 //LOGIN
 router.post("/login", async (req, res) => {
